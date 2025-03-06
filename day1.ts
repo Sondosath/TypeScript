@@ -214,7 +214,7 @@ for (let i = 0; i < prices.length; i++) {
 // Sum All Elements in an Array
 // You are given an array of numbers. Iterate through the array and print the sum of all elements , without using a function.
 
-let numbers: number[] = [10, 20, 30, 40, 50]; 
+let numbers: number[] = [10, 20, 30, 40, 50,60,70,80,90,100]; 
 let sum: number = 0;
 
 for (let i = 0; i < numbers.length; i++) {
