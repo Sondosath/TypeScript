@@ -137,30 +137,54 @@ function loadProducts(): void {
     const productList : any = document.getElementById("productForm");
    
 
-    let name : any = document.getElementById("name");
+    let name :any= productList.name;
+    let description : any =  productList.description;
+    let quantity : any =  productList.quantity;
+    let price : any =  productList.price;
     const products4: Product[] = [
         {
             name: name.value ,
-            description: "A high",
-            quantity: 3,
-            price: 100
+            description:description.value,
+            quantity: quantity.value,
+            price: price.value
         }
-    ]
-
-    console.log(products4);
-    
-        // جلب القيم من الحقول
-        // let product = {
-        //     name = document.getElementById("name").value,
-        //     description: document.getElementById("description").value,
-        //     price: document.getElementById("price").value,
-        //     quantity: document.getElementById("quantity").value
-        // };
-
-        
+    ]         
         localStorage.setItem("productData", JSON.stringify(products4));
 
         alert("Product saved successfully in localStorage!");
+
+        productList.innerHTML = ""; // Clear existing content
+         const Card : any = document.getElementById("Card");
+
+
+        products4.forEach(product => {
+            const h5 = document.createElement("h5");
+            const paragraph = document.createElement("p");
+            const paragraph1 = document.createElement("p");
+            const paragraph2 = document.createElement("p");
+
+            h5.textContent =  `  ${product.name}`;  
+            Card.appendChild(h5);
+            h5.className ="card-title";
+
+
+            paragraph.textContent =`${product.description} `;
+            Card.appendChild(paragraph);
+            paragraph.className="card-text";
+
+
+            paragraph1.textContent =`${product.quantity} `;
+            paragraph1.className="card-text";
+            Card.appendChild(paragraph1);
+
+
+            paragraph2.textContent =`${product.price} `;
+            paragraph2.className="card-text";
+            Card.appendChild(paragraph2);
+
+            
+        });
+    
     
 };
 
