@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: white;
+            margin: 10px auto;
+            padding: 10px;
+            width: 50%;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+ <!--Create a form inside the HTML page that contains inputs for ( name , description, price and quantity)
+  for product and when you submit the form it will save the product inside array -->
+
+    <form id="productForm">
+        <label>Name</label>
+        <input type="text" name="name" value="name">
+        <br>
+        <label>description</label>
+        <input type="text" name="description" value="description">
+        <br>
+        <label>price</label>
+        <input type="text" price="name" value="price">
+        <br>
+        <label>quantity</label>
+        <input type="text" price="quantity" value="quantity">
+        <br>
+       
+        <button type="button" onclick="loadProducts()"> Submit</button>
+
+    </form>
+    <script src="task2.js"></script>
+</body>
+</html>
